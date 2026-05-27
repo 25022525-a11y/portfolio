@@ -375,8 +375,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.35rem;
-    color: var(--primary-color);
     box-shadow: var(--shadow);
+}
+
+/* Đổi màu đỏ cam riêng cho icon PDF */
+.icon-pdf-color {
+    color: #e0443e !important;
 }
 
 .meta-subject {
