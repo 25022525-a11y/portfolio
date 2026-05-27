@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .education-box {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-top: 2rem;
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+            max-width: 600px;
+        }
+        .education-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .education-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .education-box li {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        .education-box li:last-child {
+            border-bottom: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -36,7 +68,7 @@
                 <p class="summary" data-i18n="hero_summary">Tôi đam mê xây dựng các hệ thống dữ liệu, tự động hóa quy trình và tạo ra những sản phẩm công nghệ mang lại giá trị thực tế.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary" data-i18n="btn_projects">Xem dự án</a>
-                    <a href="javascript:void(0)" class="btn btn-outline" data-i18n="btn_cv" onclick="alert('Tính năng tải CV PDF đang được giả lập!')"><i class="fas fa-download"></i> Tải CV</a>
+                    <a href="cv-minh-thang.pdf" download="cv-minh-thang.pdf" class="btn btn-outline" data-i18n="btn_cv"><i class="fas fa-download"></i> Tải CV</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -49,6 +81,15 @@
             <div class="about-content">
                 <p data-i18n="about_desc_1">Với nền tảng kỹ thuật vững chắc và tư duy của một người làm sản phẩm, tôi luôn tìm cách giải quyết các bài toán khó bằng code. Trọng tâm của tôi là Python, phân tích dữ liệu và tự động hóa.</p>
                 <p data-i18n="about_desc_2">Khi rời xa màn hình máy tính, tôi thích đọc sách về kinh doanh, đi leo núi để rèn luyện sức khỏe và viết blog chia sẻ kiến thức công nghệ đến với cộng đồng.</p>
+                
+                <div class="education-box">
+                    <h3 data-i18n="edu_title"><i class="fas fa-graduation-cap"></i> Thông tin học vấn</h3>
+                    <ul>
+                        <li><strong data-i18n="edu_school_label">Trường:</strong> <span data-i18n="edu_school_val">[Nhập tên trường Đại học của bạn]</span></li>
+                        <li><strong data-i18n="edu_major_label">Ngành học:</strong> <span data-i18n="edu_major_val">[Nhập tên ngành học của bạn]</span></li>
+                        <li><strong data-i18n="edu_class_label">Lớp:</strong> <span data-i18n="edu_class_val">[Nhập tên lớp của bạn]</span></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -139,7 +180,7 @@
             <h2 class="section-title" data-i18n="contact_title">Liên hệ với tôi</h2>
             
             <div class="contact-container">
-                <form action="https://formspree.io/f/your_formspree_id" method="POST" class="contact-form">
+                <form action="https://formspree.io/f/xredojvl" method="POST" class="contact-form">
                     <div class="input-group">
                         <label for="name" data-i18n="form_name">Tên của bạn</label>
                         <input type="text" id="name" name="name" required>
@@ -158,7 +199,7 @@
                 <div class="youtube-stats">
                     <i class="fab fa-youtube yt-icon"></i>
                     <h3 data-i18n="yt_title">Cộng đồng YouTube</h3>
-                    <div class="counter" id="yt-counter" data-target="1500">0</div>
+                    <div class="counter" id="yt-counter" data-target="1000" data-current="0">0</div>
                     <p data-i18n="yt_desc">Người đăng ký kênh</p>
                 </div>
             </div>
@@ -184,7 +225,7 @@
     </footer>
 
     <script>
-        // 1. CHỨC NĂNG ĐA NGÔN NGỮ (Anh/Việt)
+        // 1. CHỨC NĂNG ĐA NGÔN NGỮ (Anh/Việt) - Đã bổ sung các từ khóa Học Vấn
         const translations = {
             vi: {
                 nav_about: "Giới thiệu", nav_skills: "Kỹ năng", nav_projects: "Dự án", nav_blog: "Blog", nav_contact: "Liên hệ",
@@ -194,6 +235,8 @@
                 about_title: "Về bản thân tôi", 
                 about_desc_1: "Với nền tảng kỹ thuật vững chắc và tư duy của một người làm sản phẩm, tôi luôn tìm cách giải quyết các bài toán khó bằng code. Trọng tâm của tôi là Python, phân tích dữ liệu và tự động hóa.",
                 about_desc_2: "Khi rời xa màn hình máy tính, tôi thích đọc sách về kinh doanh, đi leo núi để rèn luyện sức khỏe và viết blog chia sẻ kiến thức công nghệ đến với cộng đồng.",
+                edu_title: "Thông tin học vấn", edu_school_label: "Trường:", edu_school_val: "[Nhập tên trường Đại học của bạn]",
+                edu_major_label: "Ngành học:", edu_major_val: "[Nhập tên ngành học của bạn]", edu_class_label: "Lớp:", edu_class_val: "[Nhập tên lớp của bạn]",
                 skills_title: "Kỹ năng chuyên môn", projects_title: "Dự án tiêu biểu",
                 proj1_title: "Hệ thống Phân tích Dữ liệu", proj1_desc: "Thu thập và phân tích dữ liệu thị trường từ nhiều nguồn, xuất báo cáo tự động mỗi ngày.",
                 proj2_title: "Bot Tự động hóa Telegram", proj2_desc: "Bot quản lý nhóm, gửi cảnh báo máy chủ và tương tác với người dùng qua API.",
@@ -214,6 +257,8 @@
                 about_title: "About Me", 
                 about_desc_1: "With a solid technical background and a product mindset, I always seek to solve complex problems with code. My focus is on Python, data analysis, and automation.",
                 about_desc_2: "Away from the screen, I enjoy reading business books, hiking for fitness, and writing blogs to share tech knowledge with the community.",
+                edu_title: "Education", edu_school_label: "University:", edu_school_val: "[Enter your University name]",
+                edu_major_label: "Major:", edu_major_val: "[Enter your Major]", edu_class_label: "Class:", edu_class_val: "[Enter your Class]",
                 skills_title: "Technical Skills", projects_title: "Featured Projects",
                 proj1_title: "Data Analysis System", proj1_desc: "Collect and analyze market data from multiple sources, exporting automated daily reports.",
                 proj2_title: "Telegram Automation Bot", proj2_desc: "A bot for group management, server alerts, and user interaction via API.",
@@ -238,23 +283,28 @@
             
             elementsToTranslate.forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                // Thay đổi text nhưng giữ lại các thẻ HTML bên trong (như icon i)
+                // Nếu thẻ có chứa icon <i> thì giữ nguyên icon
                 if (el.innerHTML.includes('<i')) {
                     const iconHTML = el.querySelector('i').outerHTML;
-                    el.innerHTML = currentLang === 'en' && key === 'btn_readmore' ? `${translations[currentLang][key]} ${iconHTML}` : 
-                                   (key === 'btn_cv' ? `${iconHTML} ${translations[currentLang][key]}` : `${translations[currentLang][key]} ${iconHTML}`);
+                    // Xử lý vị trí icon linh hoạt cho nút CV, Readmore và Tiêu đề học vấn
+                    if(key === 'btn_cv') {
+                        el.innerHTML = `${iconHTML} ${translations[currentLang][key]}`;
+                    } else if (key === 'edu_title') {
+                        el.innerHTML = `${iconHTML} ${translations[currentLang][key]}`;
+                    } else {
+                        el.innerHTML = `${translations[currentLang][key]} ${iconHTML}`;
+                    }
                 } else {
                     el.textContent = translations[currentLang][key];
                 }
             });
         });
 
-        // 2. CHỨC NĂNG DARK/LIGHT THEME (Lưu LocalStorage)
+        // 2. CHỨC NĂNG DARK/LIGHT THEME
         const themeToggleBtn = document.getElementById('theme-toggle');
         const body = document.body;
         const icon = themeToggleBtn.querySelector('i');
 
-        // Kiểm tra trạng thái theme đã lưu trước đó
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-mode');
             icon.classList.replace('fa-moon', 'fa-sun');
@@ -271,18 +321,15 @@
             }
         });
 
-        // 3. HIỆU ỨNG CUỘN TRANG (Scroll Animation)
+        // 3. HIỆU ỨNG CUỘN TRANG
         const scrollElements = document.querySelectorAll('.scroll-animate');
-        
         const elementInView = (el, dividend = 1) => {
             const elementTop = el.getBoundingClientRect().top;
             return (elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend);
         };
-
         const displayScrollElement = (element) => {
             element.classList.add('scrolled');
         };
-
         const handleScrollAnimation = () => {
             scrollElements.forEach((el) => {
                 if (elementInView(el, 1.1)) {
@@ -290,40 +337,48 @@
                 }
             })
         }
-        // Kích hoạt khi cuộn
         window.addEventListener('scroll', () => {
             handleScrollAnimation();
         });
-        // Kích hoạt ngay lúc tải trang
         handleScrollAnimation();
 
-        // 4. BỘ ĐẾM SỐ YOUTUBE SUBSCRIBERS
+        // 4. BỘ ĐẾM SỐ YOUTUBE SUBSCRIBERS (Đã sửa lỗi)
         const counter = document.getElementById('yt-counter');
-        const target = +counter.getAttribute('data-target');
-        let hasCounted = false;
-
+        
         const updateCounter = () => {
-            const count = +counter.innerText.replace(/,/g, '');
-            const speed = 200; // Tốc độ chạy (càng nhỏ càng nhanh)
-            const inc = target / speed;
+            // Lấy số mục tiêu và số hiện tại từ thuộc tính HTML
+            const target = +counter.getAttribute('data-target');
+            let count = +counter.getAttribute('data-current');
+            
+            // Tính toán bước nhảy (chia làm 100 lần cập nhật)
+            const increment = target / 100;
 
             if (count < target) {
-                counter.innerText = Math.ceil(count + inc).toLocaleString();
-                setTimeout(updateCounter, 10);
+                // Tăng số và làm tròn
+                count += increment;
+                if (count > target) count = target; // Đảm bảo không vượt quá mục tiêu
+                
+                // Cập nhật lại giao diện và thuộc tính ẩn
+                counter.setAttribute('data-current', count);
+                counter.innerText = Math.ceil(count).toLocaleString();
+                
+                // Gọi lại hàm sau 20 mili-giây
+                setTimeout(updateCounter, 20);
             } else {
+                // Kết thúc: hiển thị con số cuối cùng chính xác
                 counter.innerText = target.toLocaleString();
             }
         };
 
-        // Dùng Intersection Observer để chỉ chạy bộ đếm khi cuộn tới phần Contact
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting && !hasCounted) {
+        // YÊU CẦU 4: Dùng Intersection Observer để chỉ chạy 1 lần duy nhất khi cuộn tới
+        const observer = new IntersectionObserver((entries, obs) => {
+            if (entries[0].isIntersecting) {
                 updateCounter();
-                hasCounted = true;
+                obs.unobserve(counter); // Hủy theo dõi phần tử này ngay sau khi đã kích hoạt
             }
         }, { threshold: 0.5 });
 
-        observer.observe(document.getElementById('contact'));
+        observer.observe(counter);
 
     </script>
 </body>
