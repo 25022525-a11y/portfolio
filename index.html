@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Thắng | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Minh Thắng</a>
+            <div class="nav-links">
+                <a href="#about" data-i18n="nav_about">Giới thiệu</a>
+                <a href="#skills" data-i18n="nav_skills">Kỹ năng</a>
+                <a href="#projects" data-i18n="nav_projects">Dự án</a>
+                <a href="#blogs" data-i18n="nav_blog">Blog</a>
+                <a href="#contact" data-i18n="nav_contact">Liên hệ</a>
+            </div>
+            <div class="nav-controls">
+                <button id="lang-toggle" class="icon-btn">EN</button>
+                <button id="theme-toggle" class="icon-btn"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero-section scroll-animate">
+            <div class="hero-content">
+                <p class="greeting" data-i18n="hero_greeting">Xin chào, tôi là</p>
+                <h1 class="name">Minh Thắng</h1>
+                <h2 class="slogan" data-i18n="hero_slogan">Python Developer & Tech Enthusiast</h2>
+                <p class="summary" data-i18n="hero_summary">Tôi đam mê xây dựng các hệ thống dữ liệu, tự động hóa quy trình và tạo ra những sản phẩm công nghệ mang lại giá trị thực tế.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-i18n="btn_projects">Xem dự án</a>
+                    <a href="javascript:void(0)" class="btn btn-outline" data-i18n="btn_cv" onclick="alert('Tính năng tải CV PDF đang được giả lập!')"><i class="fas fa-download"></i> Tải CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://api.dicebear.com/6.x/avataaars/svg?seed=Thang&style=circle&backgroundColor=3498db" alt="Minh Thắng Avatar">
+            </div>
+        </section>
+
+        <section id="about" class="section scroll-animate">
+            <h2 class="section-title" data-i18n="about_title">Về bản thân tôi</h2>
+            <div class="about-content">
+                <p data-i18n="about_desc_1">Với nền tảng kỹ thuật vững chắc và tư duy của một người làm sản phẩm, tôi luôn tìm cách giải quyết các bài toán khó bằng code. Trọng tâm của tôi là Python, phân tích dữ liệu và tự động hóa.</p>
+                <p data-i18n="about_desc_2">Khi rời xa màn hình máy tính, tôi thích đọc sách về kinh doanh, đi leo núi để rèn luyện sức khỏe và viết blog chia sẻ kiến thức công nghệ đến với cộng đồng.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section bg-alt scroll-animate">
+            <h2 class="section-title" data-i18n="skills_title">Kỹ năng chuyên môn</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-python skill-icon"></i>
+                    <h3>Python</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-spider skill-icon"></i>
+                    <h3>Web Scraping</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database skill-icon"></i>
+                    <h3>SQL / Databases</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <h3>HTML / CSS</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section scroll-animate">
+            <h2 class="section-title" data-i18n="projects_title">Dự án tiêu biểu</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Project 1">
+                    <div class="project-info">
+                        <h3 data-i18n="proj1_title">Hệ thống Phân tích Dữ liệu</h3>
+                        <p data-i18n="proj1_desc">Thu thập và phân tích dữ liệu thị trường từ nhiều nguồn, xuất báo cáo tự động mỗi ngày.</p>
+                        <div class="tech-tags">
+                            <span>Python</span><span>Pandas</span><span>SQL</span>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline" data-i18n="btn_source">Xem Source Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80" alt="Project 2">
+                    <div class="project-info">
+                        <h3 data-i18n="proj2_title">Bot Tự động hóa Telegram</h3>
+                        <p data-i18n="proj2_desc">Bot quản lý nhóm, gửi cảnh báo máy chủ và tương tác với người dùng qua API.</p>
+                        <div class="tech-tags">
+                            <span>Python</span><span>Telegram API</span>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline" data-i18n="btn_source">Xem Source Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80" alt="Project 3">
+                    <div class="project-info">
+                        <h3 data-i18n="proj3_title">Công cụ Cào Dữ liệu Bất động sản</h3>
+                        <p data-i18n="proj3_desc">Web scraper lấy thông tin giá nhà đất từ các trang rao vặt, vượt qua captcha cơ bản.</p>
+                        <div class="tech-tags">
+                            <span>BeautifulSoup</span><span>Selenium</span>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline" data-i18n="btn_source">Xem Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blogs" class="section bg-alt scroll-animate">
+            <h2 class="section-title" data-i18n="blog_title">Bài viết & Tài liệu</h2>
+            <div class="blog-list">
+                <article class="blog-item">
+                    <div class="blog-date">24 Thg 10, 2023</div>
+                    <h3 data-i18n="blog1_title">Tối ưu hóa vòng lặp trong Python</h3>
+                    <p data-i18n="blog1_desc">Hướng dẫn cách sử dụng List Comprehension và Generators để tăng tốc độ xử lý dữ liệu lớn.</p>
+                    <a href="#" class="read-more" data-i18n="btn_readmore">Đọc tiếp <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="blog-item">
+                    <div class="blog-date">15 Thg 9, 2023</div>
+                    <h3 data-i18n="blog2_title">Kinh nghiệm chống Block khi Web Scraping</h3>
+                    <p data-i18n="blog2_desc">Xoay vòng Proxy, giả mạo User-Agent và các chiến thuật hay để lấy dữ liệu an toàn.</p>
+                    <a href="#" class="read-more" data-i18n="btn_readmore">Đọc tiếp <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section scroll-animate">
+            <h2 class="section-title" data-i18n="contact_title">Liên hệ với tôi</h2>
+            
+            <div class="contact-container">
+                <form action="https://formspree.io/f/your_formspree_id" method="POST" class="contact-form">
+                    <div class="input-group">
+                        <label for="name" data-i18n="form_name">Tên của bạn</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="message" data-i18n="form_msg">Lời nhắn</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="btn_send">Gửi tin nhắn</button>
+                </form>
+
+                <div class="youtube-stats">
+                    <i class="fab fa-youtube yt-icon"></i>
+                    <h3 data-i18n="yt_title">Cộng đồng YouTube</h3>
+                    <div class="counter" id="yt-counter" data-target="1500">0</div>
+                    <p data-i18n="yt_desc">Người đăng ký kênh</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="subscribe-box">
+                <h4 data-i18n="footer_sub">Đăng ký nhận bài viết mới</h4>
+                <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký!');">
+                    <input type="email" placeholder="Email của bạn..." required>
+                    <button type="submit" data-i18n="btn_sub">Đăng ký</button>
+                </form>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p>&copy; 2026 Minh Thắng Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. CHỨC NĂNG ĐA NGÔN NGỮ (Anh/Việt)
+        const translations = {
+            vi: {
+                nav_about: "Giới thiệu", nav_skills: "Kỹ năng", nav_projects: "Dự án", nav_blog: "Blog", nav_contact: "Liên hệ",
+                hero_greeting: "Xin chào, tôi là", hero_slogan: "Python Developer & Tech Enthusiast",
+                hero_summary: "Tôi đam mê xây dựng các hệ thống dữ liệu, tự động hóa quy trình và tạo ra những sản phẩm công nghệ mang lại giá trị thực tế.",
+                btn_projects: "Xem dự án", btn_cv: "Tải CV",
+                about_title: "Về bản thân tôi", 
+                about_desc_1: "Với nền tảng kỹ thuật vững chắc và tư duy của một người làm sản phẩm, tôi luôn tìm cách giải quyết các bài toán khó bằng code. Trọng tâm của tôi là Python, phân tích dữ liệu và tự động hóa.",
+                about_desc_2: "Khi rời xa màn hình máy tính, tôi thích đọc sách về kinh doanh, đi leo núi để rèn luyện sức khỏe và viết blog chia sẻ kiến thức công nghệ đến với cộng đồng.",
+                skills_title: "Kỹ năng chuyên môn", projects_title: "Dự án tiêu biểu",
+                proj1_title: "Hệ thống Phân tích Dữ liệu", proj1_desc: "Thu thập và phân tích dữ liệu thị trường từ nhiều nguồn, xuất báo cáo tự động mỗi ngày.",
+                proj2_title: "Bot Tự động hóa Telegram", proj2_desc: "Bot quản lý nhóm, gửi cảnh báo máy chủ và tương tác với người dùng qua API.",
+                proj3_title: "Công cụ Cào Dữ liệu Bất động sản", proj3_desc: "Web scraper lấy thông tin giá nhà đất từ các trang rao vặt, vượt qua captcha cơ bản.",
+                btn_source: "Xem Source Code", blog_title: "Bài viết & Tài liệu",
+                blog1_title: "Tối ưu hóa vòng lặp trong Python", blog1_desc: "Hướng dẫn cách sử dụng List Comprehension và Generators để tăng tốc độ xử lý dữ liệu lớn.",
+                blog2_title: "Kinh nghiệm chống Block khi Web Scraping", blog2_desc: "Xoay vòng Proxy, giả mạo User-Agent và các chiến thuật hay để lấy dữ liệu an toàn.",
+                btn_readmore: "Đọc tiếp", contact_title: "Liên hệ với tôi",
+                form_name: "Tên của bạn", form_msg: "Lời nhắn", btn_send: "Gửi tin nhắn",
+                yt_title: "Cộng đồng YouTube", yt_desc: "Người đăng ký kênh",
+                footer_sub: "Đăng ký nhận bài viết mới", btn_sub: "Đăng ký"
+            },
+            en: {
+                nav_about: "About", nav_skills: "Skills", nav_projects: "Projects", nav_blog: "Blog", nav_contact: "Contact",
+                hero_greeting: "Hello, I am", hero_slogan: "Python Developer & Tech Enthusiast",
+                hero_summary: "I am passionate about building data systems, automating processes, and creating tech products that bring real value.",
+                btn_projects: "View Projects", btn_cv: "Download CV",
+                about_title: "About Me", 
+                about_desc_1: "With a solid technical background and a product mindset, I always seek to solve complex problems with code. My focus is on Python, data analysis, and automation.",
+                about_desc_2: "Away from the screen, I enjoy reading business books, hiking for fitness, and writing blogs to share tech knowledge with the community.",
+                skills_title: "Technical Skills", projects_title: "Featured Projects",
+                proj1_title: "Data Analysis System", proj1_desc: "Collect and analyze market data from multiple sources, exporting automated daily reports.",
+                proj2_title: "Telegram Automation Bot", proj2_desc: "A bot for group management, server alerts, and user interaction via API.",
+                proj3_title: "Real Estate Scraper Tool", proj3_desc: "Web scraper extracting housing prices from classified sites, bypassing basic captchas.",
+                btn_source: "View Source", blog_title: "Articles & Docs",
+                blog1_title: "Loop Optimization in Python", blog1_desc: "Guide on using List Comprehensions and Generators to speed up big data processing.",
+                blog2_title: "Anti-blocking Tips for Web Scraping", blog2_desc: "Proxy rotation, User-Agent spoofing, and good tactics for safe data extraction.",
+                btn_readmore: "Read more", contact_title: "Contact Me",
+                form_name: "Your Name", form_msg: "Message", btn_send: "Send Message",
+                yt_title: "YouTube Community", yt_desc: "Subscribers",
+                footer_sub: "Subscribe for new posts", btn_sub: "Subscribe"
+            }
+        };
+
+        let currentLang = 'vi';
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'vi' ? 'en' : 'vi';
+            langToggleBtn.textContent = currentLang === 'vi' ? 'EN' : 'VI';
+            
+            elementsToTranslate.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                // Thay đổi text nhưng giữ lại các thẻ HTML bên trong (như icon i)
+                if (el.innerHTML.includes('<i')) {
+                    const iconHTML = el.querySelector('i').outerHTML;
+                    el.innerHTML = currentLang === 'en' && key === 'btn_readmore' ? `${translations[currentLang][key]} ${iconHTML}` : 
+                                   (key === 'btn_cv' ? `${iconHTML} ${translations[currentLang][key]}` : `${translations[currentLang][key]} ${iconHTML}`);
+                } else {
+                    el.textContent = translations[currentLang][key];
+                }
+            });
+        });
+
+        // 2. CHỨC NĂNG DARK/LIGHT THEME (Lưu LocalStorage)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggleBtn.querySelector('i');
+
+        // Kiểm tra trạng thái theme đã lưu trước đó
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // 3. HIỆU ỨNG CUỘN TRANG (Scroll Animation)
+        const scrollElements = document.querySelectorAll('.scroll-animate');
+        
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend);
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add('scrolled');
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.1)) {
+                    displayScrollElement(el);
+                }
+            })
+        }
+        // Kích hoạt khi cuộn
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+        // Kích hoạt ngay lúc tải trang
+        handleScrollAnimation();
+
+        // 4. BỘ ĐẾM SỐ YOUTUBE SUBSCRIBERS
+        const counter = document.getElementById('yt-counter');
+        const target = +counter.getAttribute('data-target');
+        let hasCounted = false;
+
+        const updateCounter = () => {
+            const count = +counter.innerText.replace(/,/g, '');
+            const speed = 200; // Tốc độ chạy (càng nhỏ càng nhanh)
+            const inc = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc).toLocaleString();
+                setTimeout(updateCounter, 10);
+            } else {
+                counter.innerText = target.toLocaleString();
+            }
+        };
+
+        // Dùng Intersection Observer để chỉ chạy bộ đếm khi cuộn tới phần Contact
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !hasCounted) {
+                updateCounter();
+                hasCounted = true;
+            }
+        }, { threshold: 0.5 });
+
+        observer.observe(document.getElementById('contact'));
+
+    </script>
+</body>
+</html>
