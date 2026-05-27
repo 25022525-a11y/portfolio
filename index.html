@@ -18,7 +18,7 @@
             text-align: left;
             display: inline-block;
             width: 100%;
-            max-width: 600px;
+            max-width: 650px;
         }
         .education-box h3 {
             color: var(--primary-color);
@@ -85,9 +85,9 @@
                 <div class="education-box">
                     <h3 data-i18n="edu_title"><i class="fas fa-graduation-cap"></i> Thông tin học vấn</h3>
                     <ul>
-                        <li><strong data-i18n="edu_school_label">Trường:</strong> <span data-i18n="edu_school_val">[Nhập tên trường Đại học của bạn]</span></li>
-                        <li><strong data-i18n="edu_major_label">Ngành học:</strong> <span data-i18n="edu_major_val">[Nhập tên ngành học của bạn]</span></li>
-                        <li><strong data-i18n="edu_class_label">Lớp:</strong> <span data-i18n="edu_class_val">[Nhập tên lớp của bạn]</span></li>
+                        <li><strong data-i18n="edu_name_label">Họ và tên:</strong> <span data-i18n="edu_name_val">Hà Minh Thắng</span></li>
+                        <li><strong data-i18n="edu_school_label">Trường:</strong> <span data-i18n="edu_school_val">Đại học Công nghệ - Đại học Quốc gia Hà Nội</span></li>
+                        <li><strong data-i18n="edu_major_label">Ngành học:</strong> <span data-i18n="edu_major_val">Công nghệ - Kỹ thuật Điện tử Viễn Thông</span></li>
                     </ul>
                 </div>
             </div>
@@ -225,7 +225,7 @@
     </footer>
 
     <script>
-        // 1. CHỨC NĂNG ĐA NGÔN NGỮ (Anh/Việt) - Đã bổ sung các từ khóa Học Vấn
+        // 1. CHỨC NĂNG ĐA NGÔN NGỮ (Đã cập nhật thông tin Học Vấn của bạn)
         const translations = {
             vi: {
                 nav_about: "Giới thiệu", nav_skills: "Kỹ năng", nav_projects: "Dự án", nav_blog: "Blog", nav_contact: "Liên hệ",
@@ -235,8 +235,13 @@
                 about_title: "Về bản thân tôi", 
                 about_desc_1: "Với nền tảng kỹ thuật vững chắc và tư duy của một người làm sản phẩm, tôi luôn tìm cách giải quyết các bài toán khó bằng code. Trọng tâm của tôi là Python, phân tích dữ liệu và tự động hóa.",
                 about_desc_2: "Khi rời xa màn hình máy tính, tôi thích đọc sách về kinh doanh, đi leo núi để rèn luyện sức khỏe và viết blog chia sẻ kiến thức công nghệ đến với cộng đồng.",
-                edu_title: "Thông tin học vấn", edu_school_label: "Trường:", edu_school_val: "Trường Đại học Công nghê - Đại học Quốc gia Hà Nội",
-                edu_major_label: "Ngành học:", edu_major_val: "Công nghệ - Kỹ thuật Điện tử Viễn thông", edu_class_label: "Lớp:", edu_class_val: "K70E-EC8",
+                
+                // --- THÔNG TIN HỌC VẤN (Tiếng Việt) ---
+                edu_title: "Thông tin học vấn", 
+                edu_name_label: "Họ và tên:", edu_name_val: "Hà Minh Thắng",
+                edu_school_label: "Trường:", edu_school_val: "Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+                edu_major_label: "Ngành học:", edu_major_val: "Công nghệ - Kỹ thuật Điện tử Viễn Thông",
+                
                 skills_title: "Kỹ năng chuyên môn", projects_title: "Dự án tiêu biểu",
                 proj1_title: "Hệ thống Phân tích Dữ liệu", proj1_desc: "Thu thập và phân tích dữ liệu thị trường từ nhiều nguồn, xuất báo cáo tự động mỗi ngày.",
                 proj2_title: "Bot Tự động hóa Telegram", proj2_desc: "Bot quản lý nhóm, gửi cảnh báo máy chủ và tương tác với người dùng qua API.",
@@ -257,8 +262,13 @@
                 about_title: "About Me", 
                 about_desc_1: "With a solid technical background and a product mindset, I always seek to solve complex problems with code. My focus is on Python, data analysis, and automation.",
                 about_desc_2: "Away from the screen, I enjoy reading business books, hiking for fitness, and writing blogs to share tech knowledge with the community.",
-                edu_title: "Education", edu_school_label: "University:", edu_school_val: "[Enter your University name]",
-                edu_major_label: "Major:", edu_major_val: "[Enter your Major]", edu_class_label: "Class:", edu_class_val: "[Enter your Class]",
+                
+                // --- THÔNG TIN HỌC VẤN (Tiếng Anh) ---
+                edu_title: "Education", 
+                edu_name_label: "Full Name:", edu_name_val: "Ha Minh Thang",
+                edu_school_label: "University:", edu_school_val: "VNU University of Engineering and Technology",
+                edu_major_label: "Major:", edu_major_val: "Electronics and Telecommunications Engineering",
+                
                 skills_title: "Technical Skills", projects_title: "Featured Projects",
                 proj1_title: "Data Analysis System", proj1_desc: "Collect and analyze market data from multiple sources, exporting automated daily reports.",
                 proj2_title: "Telegram Automation Bot", proj2_desc: "A bot for group management, server alerts, and user interaction via API.",
@@ -283,10 +293,8 @@
             
             elementsToTranslate.forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                // Nếu thẻ có chứa icon <i> thì giữ nguyên icon
                 if (el.innerHTML.includes('<i')) {
                     const iconHTML = el.querySelector('i').outerHTML;
-                    // Xử lý vị trí icon linh hoạt cho nút CV, Readmore và Tiêu đề học vấn
                     if(key === 'btn_cv') {
                         el.innerHTML = `${iconHTML} ${translations[currentLang][key]}`;
                     } else if (key === 'edu_title') {
@@ -342,39 +350,32 @@
         });
         handleScrollAnimation();
 
-        // 4. BỘ ĐẾM SỐ YOUTUBE SUBSCRIBERS (Đã sửa lỗi)
+        // 4. BỘ ĐẾM SỐ YOUTUBE SUBSCRIBERS
         const counter = document.getElementById('yt-counter');
         
         const updateCounter = () => {
-            // Lấy số mục tiêu và số hiện tại từ thuộc tính HTML
             const target = +counter.getAttribute('data-target');
             let count = +counter.getAttribute('data-current');
             
-            // Tính toán bước nhảy (chia làm 100 lần cập nhật)
             const increment = target / 100;
 
             if (count < target) {
-                // Tăng số và làm tròn
                 count += increment;
-                if (count > target) count = target; // Đảm bảo không vượt quá mục tiêu
+                if (count > target) count = target; 
                 
-                // Cập nhật lại giao diện và thuộc tính ẩn
                 counter.setAttribute('data-current', count);
                 counter.innerText = Math.ceil(count).toLocaleString();
                 
-                // Gọi lại hàm sau 20 mili-giây
                 setTimeout(updateCounter, 20);
             } else {
-                // Kết thúc: hiển thị con số cuối cùng chính xác
                 counter.innerText = target.toLocaleString();
             }
         };
 
-        // YÊU CẦU 4: Dùng Intersection Observer để chỉ chạy 1 lần duy nhất khi cuộn tới
         const observer = new IntersectionObserver((entries, obs) => {
             if (entries[0].isIntersecting) {
                 updateCounter();
-                obs.unobserve(counter); // Hủy theo dõi phần tử này ngay sau khi đã kích hoạt
+                obs.unobserve(counter); 
             }
         }, { threshold: 0.5 });
 
